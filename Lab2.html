@@ -1,0 +1,120 @@
+<html>
+
+<head>
+    <title>Dance Audition Form</title>
+    <style>
+        body {
+            background-color: rgb(241, 215, 244);
+            font-family: monospace;
+        }
+
+        input {
+            background-color: antiquewhite;
+            color: rgb(0, 0, 0);
+        }
+
+        .danceFormSubmission {
+            margin-top: 100px;
+            margin-bottom: 100px;
+            margin-left: 25px;
+            margin-right: 80px;
+        }
+
+        .danceFormSubmission label{
+            font-size: 17px;
+        }
+
+        #inquiryDate {
+            font-size: 15px;
+            color: rgb(0, 0, 0);
+        }
+
+        #auditionDate {
+            font-size: 14px;
+            color: rgb(0, 0, 0);
+        }
+
+        #hoverButton {
+            background-color: aquamarine;
+            font-size: 15px;
+            color: rgb(0, 0, 0);
+            margin-top: 10px;
+            margin-left: 20px;
+        }
+
+        #hoverButton:hover {
+            background-color: blue;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Dance Audition Form</h1>
+    <form name="DanceAuditionForm" method="get" action="Lab2Page2.html">
+        <div class="danceFormSubmission">
+            <!-- User Name Details -->
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" required>
+            <br>
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" required>
+            <br>
+            <hr>
+        </div>
+
+        <!-- Audition Date -->
+        <label for="auditionDate">Audition Date:</label>
+        <input type="datetime-local" id="auditionDate" required>
+        <br>
+
+        <!-- Audition Type -->
+        <label for="reason">Audition Type (Note: You may select more than one audition type though you must be prepared to perform all selected styles):</label> <br>
+        <input type="radio" name="reason1">Street & Urban <br>
+        <input type="radio" name="reason2">Classical & Traditional <br>
+        <input type="radio" name="reason3">Latin & Social <br>
+        <input type="radio" name="reason4">Ballroom <br>
+        <input type="radio" name="reason5">African & Caribbean
+        <hr>
+
+        <!-- Address -->
+        <h3>Address</h3>
+        <label for="street">Street: </label>
+        <input type="text" id="street"><br>
+        <label for="city">City: </label>
+        <input type="text" id="city"><br>
+        <label for="state">State: </label>
+        <input type="text" id="state" maxlength="2"><br>
+        <label for="zip">Zip: </label>
+        <input type="text" id="zip" maxlength="5"><br>
+        <br>
+        <hr>
+
+        <!-- University Affiliation -->
+        <label for="university">What University are you affiliated with: </label>
+        <select id="university" name="university">
+            <option hidden disabled selected>-- Select Option --</option>
+            <option value="umd">UMD</option>
+            <option value="umbc">UMBC</option>
+            <option value="umbc">GMU</option>
+            <option value="umbc">VT</option>
+            <option value="umbc">AU</option>
+            <option value="umbc">UD</option>
+            <option value="other">Other</option>
+        </select>
+        <br>
+
+        <!-- Email -->
+        <label for="email">What is the best email to reach you at? </label>
+        <input type="email" id="email" placeholder="name@gmail.com" required>
+        <br>
+         <!-- Number -->
+         <label for="number">What is the best number to reach you at? </label>
+         <input type="number" id="number" placeholder="202-123-4567" required>
+        <br>
+        <hr>
+        <input type="submit" id="hoverButton" value="Submit">
+    </form>
+</body>
+
+</html>
